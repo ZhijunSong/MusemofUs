@@ -1,0 +1,81 @@
+@import url("https://use.typekit.net/tpn5wof.css");
+body{
+    /* background-color: #cccccc; */
+    display: block;
+    background-image:url('../image/BGbackground.png');
+    background-repeat: no-repeat;
+    background-position: top; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+
+}
+li{
+    display:block;
+    width:30%;
+    height:fit-content;
+}
+h1{
+    left: 763px;
+    top: 50px;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: right;
+    display:block;
+    color: #ffffff;
+}
+h2{
+  
+    left: 77px;
+    font-family: roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+}
+p{
+    left: 77px;
+    top: 135px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+}
+#title{
+    position:absolute;
+    top:50px;
+    right:50px;
+}
+
+#headerDeco{
+
+    /* position: absolute; */
+    width: 200px;
+    left: 77px;
+    top: 92px;
+    font-weight: 900;
+    height: 1px;
+
+}
+.intro{
+    display:block;
+    margin-left:50px;
+    margin-top:50px;
+}
+svg{
+    display:absolute;
+}
