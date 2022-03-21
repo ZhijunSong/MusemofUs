@@ -2,7 +2,7 @@
 body{
     /* background-color: #cccccc; */
     display: block;
-    background-image:url('../image/BGbackground.png');
+    background-image:url('../image/backdrop.jpg');
     background-repeat: no-repeat;
     background-position: top; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -39,6 +39,20 @@ h2{
     text-transform: capitalize;
 
     color: #FFFFFF;
+}
+h3{
+  
+    left: 50px;
+    font-family: roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+
+    color: #000000;
 }
 p{
     left: 77px;
@@ -77,5 +91,64 @@ p{
     margin-top:50px;
 }
 svg{
-    display:absolute;
+    display:block;
+}
+
+/*map css*/
+.container{
+    width:100%;
+    height: 100%;
+    display:flex;
+    background:black;
+}
+#sidebar{
+    width:30%;
+    height:100%;
+    display:flex;
+    position: absolute;
+    bottom:0px;
+    top:0;
+    left:0px;
+    flex-direction: column;
+    background-color: rgb(255, 208, 79);
+
+}
+#sidebar li{
+    width:90%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+
+}
+#sidebar li p{
+    color:black;
+}
+#map{
+    background-color: black;
+    background-image: none !important;
+}
+
+v-btn#exit {
+    display: block;
+    background: red;
+    color: white;
+    position: absolute;
+    left: 350px;
+    padding: 5px 11px;
+    font-family: roboto;
+    font-weight: 800;
+    font-size: 50px;
+}
+svg{
+    display:block;
+    /* position:absolute; */
+    /* right:10px; */
+    height:auto;
+}
+.station{
+    color:white;
+    font-family: roboto;
+    font-size: 20px;
+}
+.stops{
+    display:block;
 }
