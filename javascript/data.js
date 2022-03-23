@@ -4,9 +4,9 @@ let mapdata=[
       "features": [
         {
           "location": "Canal Street",
-          "sound address": "https://drive.google.com/file/d/1PleRfy5otSQN3mgOZS1MV_T-yn3aodzM/view?usp=sharing",
+          "sound address": "",
           "description": "Canal St-Chinese New Year Festivities: Stepping into Manhattan’s Chinatown is like being immersed in another country. During January or February, you can hear people celebrating lunar new year. A common festivity during this time is lighting firecrackers, which  were originally used to scare away evil spirits. You can hear children playing with bang snaps, a small firecracker that emitts a crisp sound when thrown on the ground.",
-          "pictures": "https://drive.google.com/file/d/1YFCtxFWh8CVuc5rj1n_sRS34EK8AUL9D/view?usp=sharing"
+          "pictures": ""
         },
         {
           "location": "Canal street : supermarket",

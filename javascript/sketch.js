@@ -24,13 +24,13 @@ let mapdata=[
         "location": "Canal street",
         "soundaddress": "/Canal street/CanalSt1.mp3",
         "description": "Canal St-Chinatown Er Hu Player: The erhu is a two-stringed bowed musical instrument and is known in the West as the Chinese violin. It can be a solo instrument or played in small emsembles or large orchestras.  Unlike street performers playing western instruments in Time square or Union square, elderly performers in Chinatown bring Chinese traditional sounds to this diverse city.",
-        "pictures": "https://raw.githubusercontent.com/ZhijunSong/MuseumofSound/main/assets/Canal%20street/Canal%20St.%2001.png"
+        "pictures": "https://raw.githubusercontent.com/ZhijunSong/MuseumofSound/main/assets/Canal%20street/CanalSt1.jpg"
       },
       {
         "location": "Canal street",
         "soundaddress": "assets/Canal street/CanalSt5.mp3",
         "description": "Canal St-Chinatown Antique Store: This store is located in Chinatown and sells Chinese trinkets and souvenirs. In this clip, you can hear the bells from a wind chime, a sound commonly heard in this area.",
-        "pictures": "https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.%2005.HEIC?raw=true"
+        "pictures": "https://raw.githubusercontent.com/ZhijunSong/MuseumofSound/main/assets/Canal%20street/CanalSt5.jpg"
       }
     ]
   },
@@ -109,12 +109,12 @@ let buttons=[];
 let cnv;
 let indexID =0;
 function preload(){
-  sound[0] =loadSound(mapdata[0].features[0].soundaddress,loaded);
+  sound[0] =loadSound("assets/Canalstreet/CanalSt1.mp3",loaded);
 
-  sound[0] =loadSound(mapdata[0].features[1].soundaddress,loaded);
-  sound[0] =loadSound(mapdata[0].features[2].soundaddress,loaded);
-  sound[0] =loadSound(mapdata[0].features[3].soundaddress,loaded);
-  sound[0] =loadSound(mapdata[0].features[4].soundaddress,loaded);
+  sound[1] =loadSound("assets/Canalstreet/CanalSt2.mp3",loaded);
+  sound[2] =loadSound("assets/Canalstreet/CanalSt3.mp3",loaded);
+  sound[3] =loadSound("assets/Canalstreet/CanalSt4.mp3",loaded);
+  sound[4] =loadSound("assets/Canalstreet/CanalSt5.mp3",loaded);
   img.push(createImg(mapdata[0].features[0].pictures,'canalst'));
   img.push(createImg(mapdata[0].features[1].pictures,'canalst'));
   img.push(createImg(mapdata[0].features[2].pictures,'canalst'));
