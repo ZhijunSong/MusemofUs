@@ -80,7 +80,7 @@ let mapdata=[
 ]
 
 
-let songs=[];
+let sound=[];
 let img=[];
 let nodeX;
 let nodeY;
@@ -154,12 +154,12 @@ function loaded(){
 }
 
 function TogglePlay(id){
-    if(!songs[id].isPlaying()){
-      songs[id].play(); 
-      songs[id].setVolume(0.5);
+    if(!sound[id].isPlaying()){
+      sound[id].play(); 
+      sound[id].setVolume(0.5);
       buttons[id].style('  transition: background-color 0.5s ease;');
     }else{
-      songs[id].stop();
+      sound[id].stop();
     }
     indexID= id;
     console.log(indexID);

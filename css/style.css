@@ -26,9 +26,12 @@ body{
     /* background-image: url("../image/backdrop.jpg"); */
     background-image:url('https://raw.githubusercontent.com/ZhijunSong/MuseumofUs/main/image/backdrop.jpg');
     background-repeat: no-repeat;
-    background-position: top; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    object-fit: fill;
+    background-size: 100% 100%;
+
+    background-position:top; /* Center the image */
+    /* height:1200px; */
+    /* background-size: cover; Resize the background image to cover the entire container */
+    /* object-fit: ; */
 
 }
 li{
