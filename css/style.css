@@ -83,7 +83,7 @@ h3{
 p{
     left: 77px;
     top: 135px;
-
+    text-transform: lowercase !important;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -91,7 +91,7 @@ p{
     line-height: 21px;
     display: flex;
     align-items: center;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 
     color: #FFFFFF;
 }
@@ -162,7 +162,7 @@ canvas#soundviz {
     left: 0px;
     flex-direction: column;
     background-color: rgb(255, 208, 79);
-overflow-y: scroll;
+    overflow-y: scroll;
 
 }
 #sidebar li{
