@@ -4,31 +4,31 @@ let mapdata=[
     "features": [
       {
         "location": "Canal Street",
-        "soundaddress": "https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.02.mp3?raw=true",
+        "soundaddress":"assets/Canal street/CanalSt1.mp3",
         "description": "Canal St-Chinese New Year Festivities: Stepping into Manhattan’s Chinatown is like being immersed in another country. During January or February, you can hear people celebrating lunar new year. A common festivity during this time is lighting firecrackers, which  were originally used to scare away evil spirits. You can hear children playing with bang snaps, a small firecracker that emitts a crisp sound when thrown on the ground.",
         "pictures": "https://raw.githubusercontent.com/ZhijunSong/MuseumofSound/main/assets/Canal%20street/CanalSt2.jpg"
       },
       {
         "location": "Canal street : supermarket",
-        "soundaddress": "https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.04.m4a?raw=true",
+        "soundaddress": "assets/Canal street/CanalSt2.mp3",
         "description": "Canal St-Chinatown Supermarket: There are many supermarkets in Chinatown where you can find authentic Asian food and ingredients. The supermarket transports shopper to the 1990s with this classic Cantonese song. The vintage decorations along with the tunes tell us a story from the last century.",
         "pictures": "https://raw.githubusercontent.com/ZhijunSong/MuseumofSound/main/assets/Canal%20street/CanalSt4.jpg"
       },
       {
         "location": "Canal street : supermarket",
-        "soundaddress": "https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.03m4a?raw=true",
+        "soundaddress": "assets/Canal street/CanalSt3.mp3",
         "description": "Canal St- Chinatown Restaurant: On a weekend morning, restaurants in Chinatown are bustling with diners. Here, you can hear the sound of people ordering food in Cantonese, a language characteristic of Chinatown. Historically, Cantonese speakers dominated the western side of Chinatown, an area that continues to be a main business district. This language represents the history of Chinese immigration.",
         "pictures": "https://raw.githubusercontent.com/ZhijunSong/MuseumofSound/main/assets/Canal%20street/CanalSt3.jpg"
       },
       {
         "location": "Canal street",
-        "soundaddress": "https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.01m4a?raw=true",
+        "soundaddress": "/Canal street/CanalSt1.mp3",
         "description": "Canal St-Chinatown Er Hu Player: The erhu is a two-stringed bowed musical instrument and is known in the West as the Chinese violin. It can be a solo instrument or played in small emsembles or large orchestras.  Unlike street performers playing western instruments in Time square or Union square, elderly performers in Chinatown bring Chinese traditional sounds to this diverse city.",
         "pictures": "https://raw.githubusercontent.com/ZhijunSong/MuseumofSound/main/assets/Canal%20street/Canal%20St.%2001.png"
       },
       {
         "location": "Canal street",
-        "soundaddress": "https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.05.m4a?raw=true",
+        "soundaddress": "assets/Canal street/CanalSt5.mp3",
         "description": "Canal St-Chinatown Antique Store: This store is located in Chinatown and sells Chinese trinkets and souvenirs. In this clip, you can hear the bells from a wind chime, a sound commonly heard in this area.",
         "pictures": "https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.%2005.HEIC?raw=true"
       }
