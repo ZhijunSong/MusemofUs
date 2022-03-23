@@ -170,7 +170,7 @@ function setup() {
   frameRate(30);
 
    
-  c = createCanvas(windowWidth, windowHeight/5);
+  c = createCanvas(windowWidth/2, windowHeight/5);
     noStroke();
     c.parent('#canvas');
     c.id('soundviz');
@@ -190,12 +190,12 @@ function setup() {
 
 
 }
-function windowResized(){
-  c.background(0);
-  c = createCanvas(windowWidth, windowHeight/5);
-  frameRate(30);
+// function windowResized(){
+//   c.background(0);
+//   c = createCanvas(windowWidth/2, windowHeight/5);
+//   frameRate(30);
 
-}
+// }
 function draw(){
   // c.background(0,0);
   var level = amplitude.getLevel();
@@ -226,9 +226,11 @@ function draw(){
     var hueValue = map(h, minHeight, height/6, 200, 255);
 
     fill(hueValue, alphaValue);
-
-    rect(x, height/2, w, h);
-    rect(width/2-20 - x, height/2, w, h);
+    push();
+    translate(width/2);
+    rect(x-width/2, height/4, w, h);
+    // rect(width-20 - x, height/2, w, h);
+    pop();
   }
 }
 

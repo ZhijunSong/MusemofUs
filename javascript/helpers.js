@@ -4,8 +4,8 @@
 
 // resize canvas on windowResized
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight/5);
-  background(0);
+  // resizeCanvas(windowWidth/2, windowHeight/5);
+  // background(0);
 }
 
 // T stands for toggleInput().
