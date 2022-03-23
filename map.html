@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinatown</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script> -->
+    <script src="javascript/p5.js"></script>
+    <script src="javascript/p5.sound.min.js"></script>
+    <script src="javascript/data.js" type="javascript" ></script>
+
+
+</head>
+<body id="maps">
+    <div class="container" id="app2">
+        <!-- <script src="javascript/datasplit.js"></script> -->
+
+    <div id="mapbox">
+        <div id='sidebar' v-show="clicked" >
+            <li> <h3>{{location}}</h3></li>
+            <li> <p><strong>{{stopName}}</strong></p></li>
+             <li>
+                <p>
+                 {{description}}
+             </p>
+         </li>
+        </div>
+        <div id="canvas">
+                <v-btn id="exit"><a href="index.html">EXIT</a></v-btn><!-- corresponding station sign-->
+                <div id="stop"> 
+                    <h3> Canal Street </h3>
+                    <image src="image/NQRsign.png" />
+                    <i class="fa fa-volume-up" aria-hidden="true" style="color:white"></i>
+
+                </div>
+
+                <script src="javascript/sketch.js"></script>
+        </div>
+    </div>
+    </div>
+
+    <!-- <script src="javascript/main.js" ></script> -->
+
+
+</body>
+</html>

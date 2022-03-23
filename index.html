@@ -7,8 +7,8 @@
     <title>landing page</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
 </head>
 <body>
 
@@ -26,29 +26,38 @@
             sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p></li>
     </div>
-    <div id="title"><h1>Museum of us</h1></div>
+    <div id="title">
+        <ul><h1>Museum of Sound</h1></ul>
+        <ul> <h2 style="color:white">In New York City</h2></ul>
+    </div>
     <div id="app1" class='pins'>
         <v-btn id="enterbutton" @click="isHidden=!isHidden" v-if="isHidden"><h2>Enter></h2></v-btn>
 
         <div v-if="!isHidden" class="stops">
         
         <svg height="100" width="100">
-            <a href='location1.html'>
+            <a href='map.html'>
             <circle cx="50" cy="50" r="20" stroke="none" stroke-width="none" fill="#FEC600" />
             </a>
         </svg>
         <svg height="100" width="100" class='pins'>
-            <a href='location2.html'>
+            <a href='map.html'>
             <circle cx="50" cy="50" r="20" stroke="none" stroke-width="none" fill="#FEC600" />
             </a>
         </svg>
         <svg height="100" width="100" class='pins'>
-            <a href='location3.html'>
+            <a href='map.html'>
             <circle cx="50" cy="50" r="20" stroke="none" stroke-width="none" fill="#FEC600" />
             </a>
         </svg>
         <svg height="100" width="100" class='pins'>
-            <a href='location3.html'>
+            <a href='map.html'>
+            <circle cx="50" cy="50" r="20" stroke="none" stroke-width="none" fill="#FEC600" />
+            </a>
+        </svg>
+
+        <svg height="100" width="100" class='pins'>
+            <a href='map.html'>
             <circle cx="50" cy="50" r="20" stroke="none" stroke-width="none" fill="#FEC600" />
             </a>
         </svg>
