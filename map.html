@@ -31,6 +31,16 @@
          </li>
         </div>
         <div id="canvas">
+                <div id="background"></div>
+                <div id="loc">
+                    
+                    <svg height="100%" width="100%">
+
+                    <line x1="50%" y1="0" x2="50%" y2="10000" style="stroke:rgb(255, 208, 79);stroke-width:10" />
+                    </svg>
+                </div>
+
+
                 <v-btn id="exit"><a href="index.html">EXIT</a></v-btn><!-- corresponding station sign-->
                 <div id="stop"> 
                     <h3> {{stopName}}</h3>
@@ -38,7 +48,6 @@
                     <i class="fa fa-volume-up" aria-hidden="true" style="color:white"></i>
 
                 </div>
-
                 <script src="javascript/sketch.js"></script>
         </div>
     </div>
@@ -46,7 +55,16 @@
 
     <!-- <script src="javascript/main.js" ></script> -->
 
-    <script src="javascript/data.js" ></script>
+    <!-- <script src="javascript/data.js" ></script> -->
+    <script>
+        function randomMargin(){
+    var randomnumber1=Math.floor(Math.random()*101) - 50;
+    var randomnumber2=Math.floor(Math.random()*101) - 50;
+    $('#soundstop').css({"margin":randomnumber1+"px"});
+}
+    
+    </script>
 
 </body>
+
 </html>
