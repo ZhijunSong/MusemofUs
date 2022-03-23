@@ -23,7 +23,8 @@ canvas {
 body{
     /* background-color: #cccccc; */
     display: block;
-    background-image:url('https://github.com/ZhijunSong/MuseumofUs/blob/86c81f182b0c4879c8f2ff3fe6e31857cbe95060/image/backdrop.jpg');
+    background-image: "image/backdrop.jpg";
+    /* background-image:url('https://github.com/ZhijunSong/MuseumofUs/blob/86c81f182b0c4879c8f2ff3fe6e31857cbe95060/image/backdrop.jpg'); */
     background-repeat: no-repeat;
     background-position: top; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire container */
