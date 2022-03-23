@@ -19,7 +19,27 @@ function preload(){
     // backgroundImg[i]=loadImage('image/,,,,');
 
     // }
-    imports[0] = loadSound('assets/ChinatownErHu.m4a');
+    //canal st
+    imports[0] = loadSound('assets/Canal street/Canal St.01m4a');
+
+    imports[1] = loadSound('assets/Canal street/Canal St.02.mp3');
+    imports[2] = loadSound('assets/Canal street/Canal St.03m4a');
+    imports[3] = loadSound('assets/Canal street/Canal St.04.m4a');
+    imports[4] = loadSound('assets/Canal street/Canal St.05.m4a');
+
+    //14th
+    imports[5] = loadSound('assets/14th street/14th St 01.mp3');
+    imports[6] = loadSound('assets/14th street/14th St. 02.mp3');
+    imports[7] = loadSound('assets/14th street/14th St. 03.mp3');
+
+
+    //34th
+  
+    imports[0] = loadSound('assets/14th street/14th St 01.mp3');
+    imports[0] = loadSound('assets/14th street/14th St 01.mp3');
+    imports[0] = loadSound('assets/14th street/14th St 01.mp3');
+    imports[0] = loadSound('assets/14th street/14th St 01.mp3');
+
 }
 
 function setup(){
@@ -56,6 +76,8 @@ function draw(){
     line(nodeX, 0, nodeX, height);
    
     sounds.forEach(sound => sound.display());
+    sounds.forEach(sound => sound.stop());
+
     sounds.forEach(sound => sound.play());
   
     

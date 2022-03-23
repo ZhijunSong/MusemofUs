@@ -98,15 +98,12 @@ let mapdata=[
       ]
     }
   ]
-var location=null;
-var description =null;
-var stopname = null;
 
 
 // console.log(location.description,stop);
 
-var app2 = new Vue({
-    el:"#mapbox",
+var app2=new Vue({
+    el:"#sidebar",
     data:{  
         counter:0,
         location:`${mapdata[0].features[0].location}`,

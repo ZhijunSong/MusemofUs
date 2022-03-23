@@ -1,6 +1,6 @@
 
 let urls=[
-    'location1.html',
+    'map.html',
     'location2.html',
     'location3.html'
 ]
@@ -10,13 +10,9 @@ let urls=[
 var app1 = new Vue({
     el:".pins",
     data:{
-    
-    counter:0,
-    url1:`${urls[0]}`,
-    url2:`${urls[1]}`,
-    url3:`${urls[2]}`,
-    isHidden: true
-
+      counter:0,
+      url:`${urls[0]}`,
+      isHidden: true
     },
     methods:{
         increment() {
@@ -30,3 +26,5 @@ var app1 = new Vue({
     }
 
 })
+
+
