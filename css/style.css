@@ -23,7 +23,7 @@ canvas {
 body{
     /* background-color: #cccccc; */
     display: block;
-    background-image:url('../image/backdrop.jpg');
+    background-image:url('https://github.com/ZhijunSong/MuseumofUs/blob/86c81f182b0c4879c8f2ff3fe6e31857cbe95060/image/backdrop.jpg');
     background-repeat: no-repeat;
     background-position: top; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -203,6 +203,7 @@ svg{
 .stops{
     display:block;
 }
+<<<<<<< HEAD
 
 i {
     padding: 20px 0px;
@@ -244,3 +245,5 @@ ul{
     width: 250px;
     height:auto;
 }
+=======
+>>>>>>> 06caebcb951d03b09e66f1f0af727a88d97832ff
