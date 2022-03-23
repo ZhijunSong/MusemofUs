@@ -20,10 +20,10 @@ function preload(){
 
     // }
     //canal st
-    imports[0] = loadSound('assets/Canal street/Canal St.01m4a');
+    imports[0] = loadSound('assets/Canal street/Canal St.01.m4a');
 
     imports[1] = loadSound('assets/Canal street/Canal St.02.mp3');
-    imports[2] = loadSound('assets/Canal street/Canal St.03m4a');
+    imports[2] = loadSound('assets/Canal street/Canal St.03.m4a');
     imports[3] = loadSound('assets/Canal street/Canal St.04.m4a');
     imports[4] = loadSound('assets/Canal street/Canal St.05.m4a');
 
@@ -35,10 +35,10 @@ function preload(){
 
     //34th
   
-    imports[0] = loadSound('assets/14th street/14th St 01.mp3');
-    imports[0] = loadSound('assets/14th street/14th St 01.mp3');
-    imports[0] = loadSound('assets/14th street/14th St 01.mp3');
-    imports[0] = loadSound('assets/14th street/14th St 01.mp3');
+    imports[8] = loadSound('assets/Ktown/34th st 02.mp3');
+    imports[9] = loadSound('assets/Ktown/34th St.01.m4a');
+    imports[10] = loadSound('assets/14th street/14th St 01.mp3');
+    imports[11] = loadSound('assets/14th street/14th St 01.mp3');
 
 }
 
@@ -58,10 +58,10 @@ function setup(){
     //create sounds
     
     sounds[0] = new SoundNode(imports[0], 1, 'snvo', nodeX, nodeY[0]);
-    sounds[1] = new SoundNode(imports[0], 1, 'snvo', nodeX, nodeY[1]);
-    sounds[2] = new SoundNode(imports[0], 1, 'snvo', nodeX, nodeY[2]);
-    sounds[3] = new SoundNode(imports[0], 1, 'snvo', nodeX, nodeY[3]);
-    sounds[4] = new SoundNode(imports[0], 1, 'snvo', nodeX, nodeY[4]);
+    sounds[1] = new SoundNode(imports[1], 1, 'snvo', nodeX, nodeY[1]);
+    sounds[2] = new SoundNode(imports[2], 1, 'snvo', nodeX, nodeY[2]);
+    sounds[3] = new SoundNode(imports[3], 1, 'snvo', nodeX, nodeY[3]);
+    sounds[4] = new SoundNode(imports[4], 1, 'snvo', nodeX, nodeY[4]);
   
     sounds[0].active = true;
     sounds[0].sound_id.play();
@@ -76,8 +76,6 @@ function draw(){
     line(nodeX, 0, nodeX, height);
    
     sounds.forEach(sound => sound.display());
-    sounds.forEach(sound => sound.stop());
-
     sounds.forEach(sound => sound.play());
   
     
@@ -85,6 +83,7 @@ function draw(){
 
 
 }
+
 function windowResized() {
   cnv=resizeCanvas(windowWidth, windowHeight);
 }
@@ -94,6 +93,8 @@ function mouseClicked(){
     if(sounds[i].checkClick()){
       clicked = true;
       clickedItem = i;
+    }else{
+      clicked =false;
     }
   }
   if(clicked){

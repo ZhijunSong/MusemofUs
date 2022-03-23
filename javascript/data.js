@@ -103,7 +103,7 @@ let mapdata=[
 // console.log(location.description,stop);
 
 var app2=new Vue({
-    el:"#sidebar",
+    el:"#mapbox",
     data:{  
         counter:0,
         location:`${mapdata[0].features[0].location}`,
