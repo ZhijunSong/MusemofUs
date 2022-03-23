@@ -98,6 +98,11 @@ let mapdata=[
     ]
   }
 ]
+//viz sound
+var mic, soundFile;
+var amplitude;
+
+var prevLevels = new Array(60);
 
 
 
@@ -115,11 +120,8 @@ function preload(){
   sound[2] =loadSound("assets/Canalstreet/CanalSt3.mp3",loaded);
   sound[3] =loadSound("assets/Canalstreet/CanalSt4.mp3",loaded);
   sound[4] =loadSound("assets/Canalstreet/CanalSt5.mp3",loaded);
-  img.push(createImg(mapdata[0].features[0].pictures,'canalst'));
-  img.push(createImg(mapdata[0].features[1].pictures,'canalst'));
-  img.push(createImg(mapdata[0].features[2].pictures,'canalst'));
-  img.push(createImg(mapdata[0].features[3].pictures,'canalst'));
-  img.push(createImg(mapdata[0].features[4].pictures,'canalst'));
+
+
 
   // songs[0] = loadSound("https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.01m4a?raw=true",loaded);
   // songs[1] = loadSound('https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.01m4a?raw=true',loaded);
@@ -132,24 +134,26 @@ function preload(){
   // img.push(createImg('https://raw.githubusercontent.com/ZhijunSong/MuseumofSound/main/assets/Canal%20street/CanalSt4.jpg','canalst'));
   // img.push(createImg('https://github.com/ZhijunSong/MuseumofSound/blob/main/assets/Canal%20street/Canal%20St.%2005.HEIC?raw=true','canalst'));
 
-  // song[5] = loadSound('assets/14th street/14thSt1.mp3',loaded);
-  // song[6] = loadSound('assets/14th street/14thSt2.mp3',loaded);
-  // song[7] = loadSound('assets/14th street/14thSt3.mp3',loaded);
+  sound[5] = loadSound('assets/14th street/14thSt1.mp3',loaded);
+  sound[6] = loadSound('assets/14th street/14thSt2.mp3',loaded);
+  sound[7] = loadSound('assets/14th street/14thSt3.mp3',loaded);
+  sound[8] = loadSound('assets/Ktown/34thSt1.mp3',loaded);
+  sound[9] = loadSound('assets/Ktown/34thSt2.mp3',loaded);
+  sound[10] = loadSound('assets/Time Square/42ndSt1.mp3',loaded);
+  sound[11] = loadSound('assets/Time Square/42ndSt2.mp3',loaded);
+  sound[12] = loadSound('assets/Time Square/42ndSt3.mp3',loaded);
 
-
-  // song[8] = loadSound('assets/Ktown/34thSt1.mp3',loaded);
-  // song[9] = loadSound('assets/Ktown/34thSt2.mp3',loaded);
-
-  // song[10] = loadSound('assets/Time Square/42ndSt1.mp3',loaded);
-  // song[11] = loadSound('assets/Time Square/42ndSt2.mp3',loaded);
-  // song[12] = loadSound('assets/Time Square/42ndSt3.mp3',loaded);
-
+  img.push(createImg("assets/Canalstreet/CanalSt1.jpg",'canalst'));
+  img.push(createImg("assets/14th street/14thSt1.jpg",'canalst'));
+  img.push(createImg("assets/Ktown/34thSt1.jpg",'canalst'));
+  img.push(createImg("assets/Time Square/42ndSt1.jpg",'canalst'));
+  img.push(createImg("assets/Time Square/42ndSt3.jpg",'canalst'));
 }
 function setup() {
   // cnv=createCanvas(0,0);
   // cnv.parent('#canvas');
 
-  for(let i=0;i<5;i++){
+  for(let i=0;i<sound.length;i++){
     buttons[i] = createButton(' ');
   }
   // buttons.forEach(button => {
@@ -162,12 +166,70 @@ function setup() {
   for(let i =0;i<img.length;i++){
     img[i].parent('background');
     img[i].id('backdrop')
-  }
+  }  
+  frameRate(30);
+
    
+  c = createCanvas(windowWidth, windowHeight/5);
+    noStroke();
+    c.parent('#canvas');
+    c.id('soundviz');
+    rectMode(CENTER);
+    colorMode(HSB);
+  
+    mic = new p5.AudioIn();
+    mic.start();
+  
+    // load the sound, but don't play it yet
+    soundFile = loadSound('assets/Canalstreet/CanalSt2.mp3')
+  
+    amplitude = new p5.Amplitude();
+    amplitude.setInput(mic);
+    amplitude.smooth(0.6);
+    background(0,0);
 
-  background(51,0);
 
+}
+function windowResized(){
+  c.background(0);
+  c = createCanvas(windowWidth, windowHeight/5);
+  frameRate(30);
 
+}
+function draw(){
+  // c.background(0,0);
+  var level = amplitude.getLevel();
+  c.background(0);
+
+  // rectangle variables
+  var spacing = 10;
+  var w = width/ (prevLevels.length * spacing);
+
+  var minHeight = 2;
+  var roundness = 20;
+
+  // add new level to end of array
+  prevLevels.push(level);
+  background(0,0);
+
+  // remove first item in array
+  prevLevels.splice(0, 1);
+
+  // loop through all the previous levels
+  for (var i = 0; i < prevLevels.length; i++) {
+
+    var x = map(i, prevLevels.length, 0, width/2, width);
+    var h = map(prevLevels[i], 0, 0.5, minHeight, height/6);
+
+    var alphaValue = logMap(i, 0, prevLevels.length, 1, 250);
+
+    var hueValue = map(h, minHeight, height/6, 200, 255);
+
+    fill(hueValue, alphaValue);
+
+    rect(x, height/2, w, h);
+    rect(width/2-20 - x, height/2, w, h);
+  }
 }
 
 function loaded(){
@@ -199,6 +261,7 @@ var app2=new Vue({
       location:`${mapdata[0].features[0].location}`,
       description:`${mapdata[0].features[0].description}`,
       stopName:`${mapdata[0].stop}`
+
   },
   methods:{
     loadDatas(location){
@@ -212,6 +275,6 @@ var app2=new Vue({
 }
 
 })
-// var app3 = new Vue({
 
-// })
+
+

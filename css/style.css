@@ -21,13 +21,14 @@ canvas {
 }
 
 body{
-    /* background-color: #cccccc; */
+    background-color: #000000;
     display: block;
     /* background-image: url("../image/backdrop.jpg"); */
     background-image:url('https://raw.githubusercontent.com/ZhijunSong/MuseumofUs/main/image/backdrop.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-
+    background-position: 0 -500px;
+    background-size: 90% auto;
+     /* object-fit:scale-down; */
     background-position:top; /* Center the image */
     /* height:1200px; */
     /* background-size: cover; Resize the background image to cover the entire container */
@@ -117,8 +118,12 @@ p{
 }
 svg{
     display:block;
+    margin-top:-100px;
 }
 
+svg:hover{
+    transform: scale(1.1);
+}
 /*map css*/
 .container{
     width:fit-content;
@@ -131,6 +136,20 @@ svg{
 }
 
 
+element.style {
+    width: 4032px;
+    height: 2863px;
+}
+canvas#soundviz {
+    display: block;
+    position: absolute;
+    height: 10% !important;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
 /*sidebar*/
 #sidebar{
     width: 20%;
@@ -226,15 +245,22 @@ ul{
     margin-block-end: 0px;
     padding-inline-start:0px;
 }
-#stop{
+#stops{
     display:block;
-    color:white;
-    width:fit-content;
-    position:absolute;
-    right:20px;
-    top:10px;
-
+    position: absolute;
+    right: 0;
 }
+
+#stop {
+    display: block;
+    color: white;
+    width: fit-content;
+    /* right: 20px; */
+    /* top: 10px; */
+    margin-bottom: 240%;
+}
+
+
 #stop h3{
     width: 100%;
     color:white;
@@ -256,7 +282,7 @@ ul{
 }
 #loc svg{
     position:absolute;
-    height:100%;
+    height:1000%;
     z-index: -1;
 }
 button#soundstop{
@@ -266,12 +292,11 @@ button#soundstop{
     border-radius: 50%;
     background-color: rgb(0, 0, 0) ;
     border: 10px solid  rgb(255, 208, 79);
-    margin:50px;
+    margin:200px;
 }
 button#soundstop:hover {
     background-color: rgb(255, 208, 79);
 }
-
 
 img#backdrop {
     display: block;

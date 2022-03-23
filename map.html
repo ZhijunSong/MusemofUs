@@ -12,6 +12,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script> -->
     <script src="javascript/p5.js"></script>
     <script src="javascript/p5.sound.min.js"></script>
+    <script src="javascript/helpers.js"></script>
 
 
 </head>
@@ -42,11 +43,29 @@
 
 
                 <v-btn id="exit"><a href="index.html">EXIT</a></v-btn><!-- corresponding station sign-->
-                <div id="stop"> 
+                <div  id="stops"style="display:block"> 
+                    <div id="stop">
                     <h3> {{stopName}}</h3>
                     <image src="image/NQRsign.png" />
                     <i class="fa fa-volume-up" aria-hidden="true" style="color:white"></i>
-
+                   </div>
+      
+                   <div id="stop">
+                    <h3> 14th St - Union Sq</h3>
+                    <image src="image/NQRsign.png" />
+                    <i class="fa fa-volume-up" aria-hidden="true" style="color:white"></i>
+                   </div>
+     
+                   <div id="stop">
+                    <h3> 34th St - Herald Sq</h3>
+                    <image src="image/NQRsign.png" />
+                    <i class="fa fa-volume-up" aria-hidden="true" style="color:white"></i>
+                </div>
+                    <div id="stop">
+                    <h3> Time Sq 42nd St</h3>
+                    <image src="image/NQRsign.png" />
+                    <i class="fa fa-volume-up" aria-hidden="true" style="color:white"></i>
+                </div>
                 </div>
                 <script src="javascript/sketch.js"></script>
         </div>
