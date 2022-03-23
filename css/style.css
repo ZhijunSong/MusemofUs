@@ -24,7 +24,7 @@ body{
     /* background-color: #cccccc; */
     display: block;
     /* background-image: url("../image/backdrop.jpg"); */
-    background-image:url('https://github.com/ZhijunSong/MuseumofUs/blob/8ac31ffcad46c4698add6f30119391b00f1d83a1/image/backdrop.jpg');
+    background-image:url('https://raw.githubusercontent.com/ZhijunSong/MuseumofUs/main/image/backdrop.jpg');
     background-repeat: no-repeat;
     background-position: top; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire container */
