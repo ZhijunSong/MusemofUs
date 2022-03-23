@@ -229,7 +229,7 @@ function draw(){
     push();
     translate(width/2);
     rect(x-width/2, height/4, w, h);
-    // rect(width-20 - x, height/2, w, h);
+    rect(x, height/4, w, h);
     pop();
   }
 }

@@ -141,15 +141,15 @@ element.style {
     height: 2863px;
 }
 canvas#soundviz {
+    top: 60%;
     display: block;
     position: absolute;
     height: 10% !important;
-    top: 50%;
+    top: 60%;
     left: 50%;
-    width: 100%;
+    width: 50% !important;
     height: 100%;
     z-index: -1;
-
 }
 /*sidebar*/
 #sidebar{
